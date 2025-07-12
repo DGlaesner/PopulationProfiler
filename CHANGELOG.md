@@ -9,7 +9,12 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+
 ---
+## [1.0.4] - 2025-07-12
+### Changed
+- Demographic calculations now based on European population data instead of German population
+
 ## [1.0.3] - 2025-07-12
 ### Added
 - `LICENSE` file with MIT License
