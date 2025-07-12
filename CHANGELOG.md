@@ -9,9 +9,12 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+---
+## [1.0.3] - 2025-07-12
 ### Added
 - `LICENSE` file with MIT License
 - `CHANGELOG.md` to document project history
+- footer to include dynamic version loading from `version.txt`
 
 ### Changed
 - Extended `README.md` with:
@@ -19,8 +22,6 @@ and uses [Semantic Versioning](https://semver.org/).
   - Technologies used
   - Contribution guidelines
   - Badge block (License, Stars, Hits, etc.)
-
----
 
 ## [1.0.2] – 2025-07-12
 ### Added
