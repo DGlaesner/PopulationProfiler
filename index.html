@@ -470,13 +470,21 @@
             </main>
 
             <footer>
-                <p>
-                    Population estimates based on German demographic data.
-                    Results are approximations for entertainment purposes.
-                </p>
+            <p>
+                Population estimates based on German demographic data.
+                Results are approximations for entertainment purposes.
+            </p>
+            <p>Version <span id="app-version"></span></p>
             </footer>
         </div>
 
         <script src="script.js"></script>
+        <script>
+        fetch('version.txt')
+            .then(res => res.text())
+            .then(txt => {
+            document.getElementById('app-version').textContent = txt.trim();
+            });
+        </script>
     </body>
 </html>
