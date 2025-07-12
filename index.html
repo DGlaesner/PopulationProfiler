@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demographic Matching Calculator - Germany</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>🔍 Demographic Matching Calculator</h1>
+                <p>
+                    Estimate how many people in Germany match specific
+                    characteristics
+                </p>
+            </header>
+
+            <main>
+                <form id="demographic-form" class="form-container">
+                    <div class="form-sections">
+                        <!-- Gender -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">👥</span> Gender
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="gender-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="gender-content">
+                                <div
+                                    class="button-group"
+                                    data-parameter="gender"
+                                >
+                                    <button
+                                        type="button"
+                                        class="choice-btn active"
+                                        data-value="male"
+                                    >
+                                        <span class="icon">👨</span>
+                                        <span class="label">Male</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="female"
+                                    >
+                                        <span class="icon">👩</span>
+                                        <span class="label">Female</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Age Range -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">🎂</span> Age Range
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="age-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="age-content">
+                                <div class="range-container">
+                                    <div
+                                        class="dual-range-slider"
+                                        id="age-inputs"
+                                    >
+                                        <div class="range-values">
+                                            <span id="age-min-value">25</span>
+                                            <span id="age-max-value">35</span>
+                                        </div>
+                                        <div class="slider-track">
+                                            <input
+                                                type="range"
+                                                id="age-min"
+                                                name="age-min"
+                                                min="18"
+                                                max="100"
+                                                value="25"
+                                                class="range-min"
+                                            />
+                                            <input
+                                                type="range"
+                                                id="age-max"
+                                                name="age-max"
+                                                min="18"
+                                                max="100"
+                                                value="35"
+                                                class="range-max"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Height -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">📏</span> Height (cm)
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="height-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="height-content">
+                                <div class="range-container">
+                                    <div
+                                        class="dual-range-slider"
+                                        id="height-inputs"
+                                    >
+                                        <div class="range-values">
+                                            <span id="height-min-value"
+                                                >170</span
+                                            >
+                                            <span id="height-max-value"
+                                                >180</span
+                                            >
+                                        </div>
+                                        <div class="slider-track">
+                                            <input
+                                                type="range"
+                                                id="height-min"
+                                                name="height-min"
+                                                min="140"
+                                                max="220"
+                                                value="170"
+                                                class="range-min"
+                                            />
+                                            <input
+                                                type="range"
+                                                id="height-max"
+                                                name="height-max"
+                                                min="140"
+                                                max="220"
+                                                value="180"
+                                                class="range-max"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Weight -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">⚖️</span> Weight (kg)
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="weight-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="weight-content">
+                                <div class="range-container">
+                                    <div
+                                        class="dual-range-slider"
+                                        id="weight-inputs"
+                                    >
+                                        <div class="range-values">
+                                            <span id="weight-min-value"
+                                                >60</span
+                                            >
+                                            <span id="weight-max-value"
+                                                >80</span
+                                            >
+                                        </div>
+                                        <div class="slider-track">
+                                            <input
+                                                type="range"
+                                                id="weight-min"
+                                                name="weight-min"
+                                                min="40"
+                                                max="150"
+                                                value="60"
+                                                class="range-min"
+                                            />
+                                            <input
+                                                type="range"
+                                                id="weight-max"
+                                                name="weight-max"
+                                                min="40"
+                                                max="150"
+                                                value="80"
+                                                class="range-max"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hair Color -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">💇</span> Hair Color
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="hair-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="hair-content">
+                                <div
+                                    class="button-group"
+                                    data-parameter="hair-color"
+                                >
+                                    <button
+                                        type="button"
+                                        class="choice-btn active"
+                                        data-value="blond"
+                                    >
+                                        <span class="icon">🟡</span>
+                                        <span class="label">Blond</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="brown"
+                                    >
+                                        <span class="icon">🟤</span>
+                                        <span class="label">Brown</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="black"
+                                    >
+                                        <span class="icon">⚫</span>
+                                        <span class="label">Black</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="red"
+                                    >
+                                        <span class="icon">🔴</span>
+                                        <span class="label">Red</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="gray"
+                                    >
+                                        <span class="icon">⚪</span>
+                                        <span class="label">Gray</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eye Color -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">👁️</span> Eye Color
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="eye-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="eye-content">
+                                <div
+                                    class="button-group"
+                                    data-parameter="eye-color"
+                                >
+                                    <button
+                                        type="button"
+                                        class="choice-btn active"
+                                        data-value="blue"
+                                    >
+                                        <span class="icon">🔵</span>
+                                        <span class="label">Blue</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="green"
+                                    >
+                                        <span class="icon">🟢</span>
+                                        <span class="label">Green</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="brown"
+                                    >
+                                        <span class="icon">🟤</span>
+                                        <span class="label">Brown</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="choice-btn"
+                                        data-value="gray"
+                                    >
+                                        <span class="icon">⚪</span>
+                                        <span class="label">Gray</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Attractiveness -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">⭐</span> Attractiveness
+                                    (1–10)
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="attractiveness-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div
+                                class="parameter-content"
+                                id="attractiveness-content"
+                            >
+                                <div class="range-container">
+                                    <div
+                                        class="dual-range-slider"
+                                        id="attractiveness-inputs"
+                                    >
+                                        <div class="range-values">
+                                            <span id="attractiveness-min-value"
+                                                >6</span
+                                            >
+                                            <span id="attractiveness-max-value"
+                                                >8</span
+                                            >
+                                        </div>
+                                        <div class="slider-track">
+                                            <input
+                                                type="range"
+                                                id="attractiveness-min"
+                                                name="attractiveness-min"
+                                                min="1"
+                                                max="10"
+                                                value="6"
+                                                class="range-min"
+                                            />
+                                            <input
+                                                type="range"
+                                                id="attractiveness-max"
+                                                name="attractiveness-max"
+                                                min="1"
+                                                max="10"
+                                                value="8"
+                                                class="range-max"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Income -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <h3 class="section-title">
+                                    <span class="icon">💵</span> Monthly Income
+                                    (€)
+                                </h3>
+                                <input
+                                    type="checkbox"
+                                    class="parameter-toggle"
+                                    id="income-toggle"
+                                    checked
+                                />
+                            </div>
+                            <div class="parameter-content" id="income-content">
+                                <div class="range-container">
+                                    <div
+                                        class="dual-range-slider"
+                                        id="income-inputs"
+                                    >
+                                        <div class="range-values">
+                                            <span id="income-min-value"
+                                                >2000</span
+                                            >
+                                            <span id="income-max-value"
+                                                >5000</span
+                                            >
+                                        </div>
+                                        <div class="slider-track">
+                                            <input
+                                                type="range"
+                                                id="income-min"
+                                                name="income-min"
+                                                min="0"
+                                                max="20000"
+                                                step="100"
+                                                value="2000"
+                                                class="range-min"
+                                            />
+                                            <input
+                                                type="range"
+                                                id="income-max"
+                                                name="income-max"
+                                                min="0"
+                                                max="20000"
+                                                step="100"
+                                                value="5000"
+                                                class="range-max"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="calculate-btn">
+                            Calculate Matches
+                        </button>
+                        <button type="reset" id="reset-btn">Reset Form</button>
+                    </div>
+                </form>
+
+                <div id="results" class="results-container hidden">
+                    <div class="results-header">
+                        <h2>📊 Results</h2>
+                    </div>
+                    <div class="results-content">
+                        <div class="result-item">
+                            <div class="result-label">Estimated Matches:</div>
+                            <div class="result-value" id="total-matches">-</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Probability:</div>
+                            <div class="result-value" id="probability">-</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Comparison:</div>
+                            <div class="result-value" id="comparison">-</div>
+                        </div>
+                        <div class="result-item fun-message">
+                            <div id="fun-message">-</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>
+                    Population estimates based on German demographic data.
+                    Results are approximations for entertainment purposes.
+                </p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
