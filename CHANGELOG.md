@@ -9,6 +9,9 @@ and uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- Demographic calculations now based on European population data instead of German population
+
 ---
 ## [1.0.3] - 2025-07-12
 ### Added
